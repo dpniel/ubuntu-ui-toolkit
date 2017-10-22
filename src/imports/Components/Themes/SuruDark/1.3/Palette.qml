@@ -25,19 +25,19 @@ Palette {
         Component.onCompleted: {
             // specific disabled colors
             var diff = {
-                raised: "#FFFFFF",
+                foreground: UbuntuColors.inkstone,
+                field: UbuntuColors.inkstone,
                 positiveText: UbuntuColors.porcelain,
                 negativeText: UbuntuColors.porcelain,
                 activityText: UbuntuColors.porcelain,
-                focusText: "#FFFFFF",
-                selectionText: "#FFFFFF"
+                focusText: UbuntuColors.porcelain
             };
             for (var p in normal) {
                 // skip objectName and all change signals
                 if (p == "objectName"|| p.indexOf("Changed") > 0) continue;
                 disabled[p] = diff[p] || (
-                    // if not specific, colors are 40% opaque normal
-                    Qt.rgba(normal[p].r, normal[p].g, normal[p].b, normal[p].a * 0.4)
+                    // if not specific, colors are 30% opaque normal
+                    Qt.rgba(normal[p].r, normal[p].g, normal[p].b, normal[p].a * 0.5)
                 );
             }
         }
@@ -51,17 +51,12 @@ Palette {
         Component.onCompleted: {
             var diff = {
                 background: UbuntuColors.inkstone,
-                backgroundText: "#FFFFFF",
-                raised: "#FFFFFF",
-                foregroundText: "#FFFFFF",
-                overlayText: "#FFFFFF",
-                fieldText: "#FFFFFF",
-                selectionText: "#FFFFFF",
+                base: UbuntuColors.inkstone,
+                foreground: UbuntuColors.inkstone,
                 positiveText: UbuntuColors.porcelain,
                 negativeText: UbuntuColors.porcelain,
-                activityText: UbuntuColors.porcelain,                
-                focusText: UbuntuColors.porcelain,
-                position: "#00000000"
+                activityText: UbuntuColors.porcelain,
+                focusText: UbuntuColors.porcelain
             };
             for (var p in selected) {
                 // skip objectName and all change signals
