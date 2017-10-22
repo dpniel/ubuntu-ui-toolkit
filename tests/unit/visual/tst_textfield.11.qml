@@ -242,7 +242,7 @@ Item {
         }
 
         function test_0_renderType() {
-            compare(textField.renderType, Text.QtRendering, "renderType default")
+            compare(textField.renderType, Text.NativeRendering, "renderType default")
         }
 
         function test_0_selectByMouse() {

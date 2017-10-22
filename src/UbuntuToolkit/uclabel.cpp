@@ -60,11 +60,12 @@ void UCLabelPrivate::updateRenderType()
 {
     Q_Q(UCLabel);
     QQuickText *qtext = static_cast<QQuickText*>(q);
-    if (UCUnits::instance()->gridUnit() <= 10) {
+    // Workaround use NativeRendering by default
+  //  if (UCUnits::instance()->gridUnit() <= 10) {
         qtext->setRenderType(QQuickText::NativeRendering);
-    } else {
-        qtext->setRenderType(QQuickText::QtRendering);
-    }
+  //  } else {
+  //      qtext->setRenderType(QQuickText::QtRendering);
+  //  }
 }
 
 /*!

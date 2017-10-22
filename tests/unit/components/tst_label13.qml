@@ -113,8 +113,8 @@ TestCase {
             compare(label.renderType, Text.NativeRendering,
                     "On low dpi screen renderType is Text.NativeRendering by default");
         } else {
-            compare(label.renderType, Text.QtRendering,
-                    "On high dpi screen renderType is Text.QtRendering by default");
+            compare(label.renderType, Text.NativeRendering,
+                    "On high dpi screen renderType is Text.NativeRendering by default");
         }
     }
 
@@ -200,7 +200,7 @@ TestCase {
 
     Label {
         id: textRenderTypePreset
-        renderType: Text.QtRendering
+        renderType: Text.NativeRendering
     }
 
     Label {
